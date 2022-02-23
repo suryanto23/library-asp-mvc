@@ -1,0 +1,52 @@
+﻿
+@model BookModel
+@{
+    ViewData["Title"] = "Book Details";
+}
+
+<div class="row d-flex justify-content-center mt-5">
+    <div class="col-5">
+        <h1 class="pb-3 fw-light border-bottom border-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+              <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+              <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+            </svg>
+            <span class="mx-2">@ViewData["Title"]</span>            
+        </h1>
+        @*<a href="@Url.ActionLink("Index", "Book")">Back</a>*@
+        <p>@ViewBag.Invalid</p>
+
+        <div class="d-flex flex-column mt-3">
+
+        </div>
+        @{
+            if(@Model != null)
+            {
+
+                <div class="cst-bg-primary mx-1 text-capitalize py-3 my-2">
+                    <h6 class="fw-light m-1">Book Title</h6>
+                    <h5>@Model.title</h5>
+                </div>
+                 <div class="cst-bg-primary mx-1 text-capitalize py-3 my-2">
+                    <h6 class="fw-light m-1">Rent</h6>
+                    <h5>@ViewBag.countRent.ToString() times</h5>
+                </div>
+                 <div class="cst-bg-primary mx-1 text-capitalize py-3 my-2">
+                    <h6 class="fw-light m-1">Book Author</h6>
+                    <h5>@Model.author</h5>
+                </div>
+                 <div class="cst-bg-primary mx-1 text-capitalize py-3 my-2">
+                    <h6 class="fw-light m-1">Publisher</h6>
+                    <h5>@Model.publisher</h5>                    
+                </div>
+                 <div class="cst-bg-primary mx-1 text-capitalize py-3 my-2">
+                    <h6 class="fw-light m-1">Published Year</h6>
+                    <h5>@Model.year.ToString()</h5>                                    
+                </div>
+            }
+        }
+
+    </div>
+</div>
+
+

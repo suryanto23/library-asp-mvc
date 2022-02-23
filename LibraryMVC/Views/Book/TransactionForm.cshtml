@@ -1,0 +1,44 @@
+﻿
+@model BookModel
+@{
+    ViewData["Title"] = "Transaction Form";
+}
+
+<div class="row d-flex justify-content-center mt-5">
+    <div class="col-5"> 
+        <h1 class="pb-3 fw-light border-bottom border-secondary">@ViewData["Title"]</h1>
+        
+        <div class="d-flex text-capitalize mt-3">
+            <div class="cst-bg-primary mx-1">
+                <h6 class="fw-light m-0">Book Title</h6>
+                <h4>@Model.title</h4>    
+            </div>
+             <div class="cst-bg-primary mx-1">
+                <h6 class="fw-light m-0">Current Stock</h6>
+                <h4>@Model.stock.ToString()</h4>    
+            </div>   
+            <div class="cst-bg-primary mx-1">
+                <h6 class="fw-light m-0">On Rent</h6>
+                <h4>@ViewBag.onRent.ToString()</h4>    
+            </div>   
+        </div>
+
+        <form class="form mt-4" method="POST" action="@Url.Action("AddTransaction", "Transaction")">
+            <input class="d-none" type="text" name="bookId" value="@Model.id"/>
+            <div class="form-group">
+                <label>Customer Name :</label>
+                <input name="name" type="text" class="form-control" placeholder="Enter customer name" required/>
+            </div>
+            <div class="form-group">
+                <label>Rent this book until :</label>
+                <input name="endRent" type="date" class="form-control" required/>
+            </div>
+            <button type="submit" class="btn cst-button-submit" >Submit</button>
+        </form>
+
+    </div>
+
+
+</div>   
+
+
