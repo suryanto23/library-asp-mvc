@@ -1,3 +1,4 @@
+
 # Library MVC
 
 Library project made with ASP with MVC scaffolding mechanism.
@@ -16,7 +17,7 @@ Library project made with ASP with MVC scaffolding mechanism.
 - [Microsoft SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)
 - [Bootstrap](https://getbootstrap.com/)
 
-## How To Run
+## How To Run (For Visual Studio Community User)
 I recommend for using [Visual Studio Community](https://visualstudio.microsoft.com/) as the text editor.
 
 Open appsettings.json file, change "ConnectionStrings" value to your corresponding database configuration:
@@ -35,9 +36,20 @@ Adding migration to your DBMS (SQL):
 
 Finally, start running the project by clicking the run button on your text editor toolbar (or pressing Ctrl+F5).
 
-#### For Visual Studio Code User :
+## How To Run (For Visual Studio Code User) :
 
-Open your terminal (in case if you can't find the terminal, it located in View -> Terminal, or you may hit CTRL + `)
+Open your CLI and go to the root directory. Afterward, run these commands below sequentially.
+
+Install dotnet EF tools:
+```sh
+dotnet tool install --global dotnet-ef
+```
+
+Adding migration :
+
+```sh
+dotnet ef database update --project id-card-simulator
+```
 
 Enter build command :
 
@@ -45,5 +57,4 @@ Enter build command :
  dotnet run --project id-card-simulator
 ```
 
-Open your browser and go to the listening port (it written on your terminal)
-
+Finally, open your browser and go to the listening port (it written on your terminal).
