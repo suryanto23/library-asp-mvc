@@ -48,13 +48,13 @@ dotnet tool install --global dotnet-ef
 Adding migration :
 
 ```sh
-dotnet ef database update --project id-card-simulator
+dotnet ef database update --project library-asp-mvc
 ```
 
 Enter build command :
 
 ```sh
- dotnet run --project id-card-simulator
+ dotnet run --project library-asp-mvc
 ```
 
 Finally, open your browser and go to the listening port (it written on your terminal).
