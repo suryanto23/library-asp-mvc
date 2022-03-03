@@ -1,7 +1,7 @@
 
 # Library MVC
 
-Library project made with ASP with MVC scaffolding mechanism.
+Library project made with ASP along with MVC scaffolding mechanism.
 
 ## Features
 - Book CRUD (Create, Read, Update, Delete)
